@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stat Leaders - MLB Analytics Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-baseball-ball"></i>
+                <span>MLB Analytics</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stats.html">Statistics</a></li>
+                <li><a href="leaders.html" class="active">Stat Leaders</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>MLB Stat Leaders</h1>
+            <p>Top performers across all statistical categories</p>
+        </div>
+    </section>
+
+    <!-- Batting Leaders -->
+    <section class="leaders-section">
+        <div class="container">
+            <h2 class="section-title">Batting Leaders</h2>
+            <div class="leaders-grid">
+                <!-- Home Runs -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-home"></i>
+                        <h3>Home Runs</h3>
+                    </div>
+                    <div class="leader-list">
+                        <div class="leader-item gold">
+                            <span class="rank">1</span>
+                            <div class="leader-info">
+                                <span class="player-name">Shohei Ohtani</span>
+                                <span class="team">LAD</span>
+                            </div>
+                            <span class="stat-value">44</span>
+                        </div>
+                        <div class="leader-item silver">
+                            <span class="rank">2</span>
+                            <div class="leader-info">
+                                <span class="player-name">Aaron Judge</span>
+                                <span class="team">NYY</span>
+                            </div>
+                            <span class="stat-value">42</span>
+                        </div>
+                        <div class="leader-item bronze">
+                            <span class="rank">3</span>
+                            <div class="leader-info">
+                                <span class="player-name">Matt Olson</span>
+                                <span class="team">ATL</span>
+                            </div>
+                            <span class="stat-value">41</span>
+                        </div>
+
+                        <div class="leader-item">
+                            <span class="rank">4</span>
+                            <div class="leader-info">
+                                <span class="player-name">Ronald Acuña Jr.</span>
+                                <span class="team">ATL</span>
+                            </div>
+                            <span class="stat-value">39</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">5</span>
+                            <div class="leader-info">
+                                <span class="player-name">Mike Trout</span>
+                                <span class="team">LAA</span>
+                            </div>
+                            <span class="stat-value">38</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batting Average -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Batting Average</h3>
+                    </div>
+                    <div class="leader-list">
+                        <div class="leader-item gold">
+                            <span class="rank">1</span>
+                            <div class="leader-info">
+                                <span class="player-name">Mike Trout</span>
+                                <span class="team">LAA</span>
+                            </div>
+                            <span class="stat-value">.324</span>
+                        </div>
+                        <div class="leader-item silver">
+                            <span class="rank">2</span>
+                            <div class="leader-info">
+                                <span class="player-name">Freddie Freeman</span>
+                                <span class="team">LAD</span>
+                            </div>
+                            <span class="stat-value">.314</span>
+                        </div>
+
+                        <div class="leader-item bronze">
+                            <span class="rank">3</span>
+                            <div class="leader-info">
+                                <span class="player-name">Aaron Judge</span>
+                                <span class="team">NYY</span>
+                            </div>
+                            <span class="stat-value">.311</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">4</span>
+                            <div class="leader-info">
+                                <span class="player-name">Yordan Alvarez</span>
+                                <span class="team">HOU</span>
+                            </div>
+                            <span class="stat-value">.307</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">5</span>
+                            <div class="leader-info">
+                                <span class="player-name">Juan Soto</span>
+                                <span class="team">NYY</span>
+                            </div>
+                            <span class="stat-value">.305</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RBI -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-running"></i>
+                        <h3>RBI</h3>
+                    </div>
+                    <div class="leader-list">
+                        <div class="leader-item gold">
+                            <span class="rank">1</span>
+                            <div class="leader-info">
+                                <span class="player-name">Matt Olson</span>
+                                <span class="team">ATL</span>
+                            </div>
+                            <span class="stat-value">118</span>
+                        </div>
+
+                        <div class="leader-item silver">
+                            <span class="rank">2</span>
+                            <div class="leader-info">
+                                <span class="player-name">Aaron Judge</span>
+                                <span class="team">NYY</span>
+                            </div>
+                            <span class="stat-value">115</span>
+                        </div>
+                        <div class="leader-item bronze">
+                            <span class="rank">3</span>
+                            <div class="leader-info">
+                                <span class="player-name">Yordan Alvarez</span>
+                                <span class="team">HOU</span>
+                            </div>
+                            <span class="stat-value">112</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">4</span>
+                            <div class="leader-info">
+                                <span class="player-name">Shohei Ohtani</span>
+                                <span class="team">LAD</span>
+                            </div>
+                            <span class="stat-value">108</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">5</span>
+                            <div class="leader-info">
+                                <span class="player-name">Freddie Freeman</span>
+                                <span class="team">LAD</span>
+                            </div>
+                            <span class="stat-value">105</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stolen Bases -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Stolen Bases</h3>
+                    </div>
+
+                    <div class="leader-list">
+                        <div class="leader-item gold">
+                            <span class="rank">1</span>
+                            <div class="leader-info">
+                                <span class="player-name">Ronald Acuña Jr.</span>
+                                <span class="team">ATL</span>
+                            </div>
+                            <span class="stat-value">42</span>
+                        </div>
+                        <div class="leader-item silver">
+                            <span class="rank">2</span>
+                            <div class="leader-info">
+                                <span class="player-name">Kyle Tucker</span>
+                                <span class="team">HOU</span>
+                            </div>
+                            <span class="stat-value">24</span>
+                        </div>
+                        <div class="leader-item bronze">
+                            <span class="rank">3</span>
+                            <div class="leader-info">
+                                <span class="player-name">Shohei Ohtani</span>
+                                <span class="team">LAD</span>
+                            </div>
+                            <span class="stat-value">21</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">4</span>
+                            <div class="leader-info">
+                                <span class="player-name">Mookie Betts</span>
+                                <span class="team">LAD</span>
+                            </div>
+                            <span class="stat-value">18</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">5</span>
+                            <div class="leader-info">
+                                <span class="player-name">Mike Trout</span>
+                                <span class="team">LAA</span>
+                            </div>
+                            <span class="stat-value">12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pitching Leaders -->
+    <section class="leaders-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Pitching Leaders</h2>
+            <div class="leaders-grid">
+                <!-- ERA -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-fire"></i>
+                        <h3>ERA</h3>
+                    </div>
+                    <div class="leader-list">
+                        <div class="leader-item gold">
+                            <span class="rank">1</span>
+                            <div class="leader-info">
+                                <span class="player-name">Spencer Strider</span>
+                                <span class="team">ATL</span>
+                            </div>
+                            <span class="stat-value">2.42</span>
+                        </div>
+                        <div class="leader-item silver">
+                            <span class="rank">2</span>
+                            <div class="leader-info">
+                                <span class="player-name">Blake Snell</span>
+                                <span class="team">SF</span>
+                            </div>
+                            <span class="stat-value">2.58</span>
+                        </div>
+                        <div class="leader-item bronze">
+                            <span class="rank">3</span>
+                            <div class="leader-info">
+                                <span class="player-name">Gerrit Cole</span>
+                                <span class="team">NYY</span>
+                            </div>
+                            <span class="stat-value">2.84</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">4</span>
+                            <div class="leader-info">
+                                <span class="player-name">Corbin Burnes</span>
+                                <span class="team">BAL</span>
+                            </div>
+                            <span class="stat-value">2.95</span>
+                        </div>
+
+                        <div class="leader-item">
+                            <span class="rank">5</span>
+                            <div class="leader-info">
+                                <span class="player-name">Pablo López</span>
+                                <span class="team">MIN</span>
+                            </div>
+                            <span class="stat-value">3.02</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wins -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Wins</h3>
+                    </div>
+                    <div class="leader-list">
+                        <div class="leader-item gold">
+                            <span class="rank">1</span>
+                            <div class="leader-info">
+                                <span class="player-name">Zack Wheeler</span>
+                                <span class="team">PHI</span>
+                            </div>
+                            <span class="stat-value">18</span>
+                        </div>
+                        <div class="leader-item silver">
+                            <span class="rank">2</span>
+                            <div class="leader-info">
+                                <span class="player-name">Spencer Strider</span>
+                                <span class="team">ATL</span>
+                            </div>
+                            <span class="stat-value">17</span>
+                        </div>
+                        <div class="leader-item bronze">
+                            <span class="rank">3</span>
+                            <div class="leader-info">
+                                <span class="player-name">Kevin Gausman</span>
+                                <span class="team">TOR</span>
+                            </div>
+                            <span class="stat-value">16</span>
+                        </div>
+
+                        <div class="leader-item">
+                            <span class="rank">4</span>
+                            <div class="leader-info">
+                                <span class="player-name">Gerrit Cole</span>
+                                <span class="team">NYY</span>
+                            </div>
+                            <span class="stat-value">15</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">5</span>
+                            <div class="leader-info">
+                                <span class="player-name">Logan Webb</span>
+                                <span class="team">SF</span>
+                            </div>
+                            <span class="stat-value">15</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strikeouts -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-times"></i>
+                        <h3>Strikeouts</h3>
+                    </div>
+                    <div class="leader-list">
+                        <div class="leader-item gold">
+                            <span class="rank">1</span>
+                            <div class="leader-info">
+                                <span class="player-name">Spencer Strider</span>
+                                <span class="team">ATL</span>
+                            </div>
+                            <span class="stat-value">281</span>
+                        </div>
+                        <div class="leader-item silver">
+                            <span class="rank">2</span>
+                            <div class="leader-info">
+                                <span class="player-name">Gerrit Cole</span>
+                                <span class="team">NYY</span>
+                            </div>
+                            <span class="stat-value">257</span>
+                        </div>
+
+                        <div class="leader-item bronze">
+                            <span class="rank">3</span>
+                            <div class="leader-info">
+                                <span class="player-name">Blake Snell</span>
+                                <span class="team">SF</span>
+                            </div>
+                            <span class="stat-value">234</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">4</span>
+                            <div class="leader-info">
+                                <span class="player-name">Framber Valdez</span>
+                                <span class="team">HOU</span>
+                            </div>
+                            <span class="stat-value">228</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">5</span>
+                            <div class="leader-info">
+                                <span class="player-name">Zack Wheeler</span>
+                                <span class="team">PHI</span>
+                            </div>
+                            <span class="stat-value">224</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saves -->
+                <div class="leader-card">
+                    <div class="leader-header">
+                        <i class="fas fa-lock"></i>
+                        <h3>Saves</h3>
+                    </div>
+                    <div class="leader-list">
+                        <div class="leader-item gold">
+                            <span class="rank">1</span>
+                            <div class="leader-info">
+                                <span class="player-name">Emmanuel Clase</span>
+                                <span class="team">CLE</span>
+                            </div>
+                            <span class="stat-value">42</span>
+                        </div>
+
+                        <div class="leader-item silver">
+                            <span class="rank">2</span>
+                            <div class="leader-info">
+                                <span class="player-name">Josh Hader</span>
+                                <span class="team">HOU</span>
+                            </div>
+                            <span class="stat-value">38</span>
+                        </div>
+                        <div class="leader-item bronze">
+                            <span class="rank">3</span>
+                            <div class="leader-info">
+                                <span class="player-name">Félix Bautista</span>
+                                <span class="team">BAL</span>
+                            </div>
+                            <span class="stat-value">36</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">4</span>
+                            <div class="leader-info">
+                                <span class="player-name">Edwin Díaz</span>
+                                <span class="team">NYM</span>
+                            </div>
+                            <span class="stat-value">34</span>
+                        </div>
+                        <div class="leader-item">
+                            <span class="rank">5</span>
+                            <div class="leader-info">
+                                <span class="player-name">Ryan Helsley</span>
+                                <span class="team">STL</span>
+                            </div>
+                            <span class="stat-value">32</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Highlights -->
+    <section class="highlights-section">
+        <div class="container">
+            <h2 class="section-title">Top Plays of the Season</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/vGfJhSE7d24" 
+                        title="Top Plays" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h3>Best Home Runs of 2026</h3>
+                    <p>Watch the longest and most impressive home runs from this season</p>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/K6K7Lqdy8X8" 
+                        title="Defensive Plays" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h3>Amazing Defensive Plays</h3>
+                    <p>Incredible catches, throws, and defensive gems</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/pI8l87uyDXM" 
+                        title="Strikeouts" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h3>Dominant Pitching Performances</h3>
+                    <p>The best strikeouts and complete game performances</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MLB Analytics Hub</h3>
+                    <p>Your trusted source for comprehensive baseball statistics and advanced analytics.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stats.html">Statistics</a></li>
+                        <li><a href="leaders.html">Stat Leaders</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Data Sources</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MLB Analytics Hub. All rights reserved. Not affiliated with MLB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

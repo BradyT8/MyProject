@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - MLB Analytics Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-baseball-ball"></i>
+                <span>MLB Analytics</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stats.html">Statistics</a></li>
+                <li><a href="leaders.html">Stat Leaders</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about MLB statistics and analytics</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="all">All Questions</button>
+                <button class="faq-category-btn" data-category="basic">Basic Stats</button>
+                <button class="faq-category-btn" data-category="advanced">Advanced Metrics</button>
+                <button class="faq-category-btn" data-category="site">Using This Site</button>
+            </div>
+
+            <div class="faq-container">
+                <!-- Basic Stats Questions -->
+                <div class="faq-item" data-category="basic">
+                    <div class="faq-question">
+                        <h3>What does AVG (Batting Average) mean?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Batting Average (AVG) is one of the most traditional baseball statistics. It's calculated by dividing a player's hits by their at-bats. For example, if a player gets 3 hits in 10 at-bats, their batting average is .300 (3÷10 = 0.300).</p>
+                        <p>A batting average of .300 or higher is considered excellent, .260-.299 is good, and anything below .250 is typically below average for a regular player.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="basic">
+                    <div class="faq-question">
+                        <h3>What is ERA (Earned Run Average)?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ERA measures how many earned runs a pitcher allows per nine innings pitched. It's calculated as: (Earned Runs × 9) ÷ Innings Pitched.</p>
+                        <p>An ERA under 3.00 is excellent, 3.00-4.00 is above average, 4.00-5.00 is average, and anything above 5.00 is considered poor for a starting pitcher.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="basic">
+                    <div class="faq-question">
+                        <h3>What do RBI and HR stand for?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>RBI (Runs Batted In):</strong> The number of runs a batter is credited with causing to score. This includes runs scored on hits, sacrifice flies, walks with bases loaded, etc.</p>
+                        <p><strong>HR (Home Runs):</strong> The number of times a batter hits the ball over the outfield fence in fair territory, allowing them and all baserunners to score.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="basic">
+                    <div class="faq-question">
+                        <h3>What is OBP and SLG?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>OBP (On-Base Percentage):</strong> Measures how frequently a batter reaches base per plate appearance. It includes hits, walks, and hit-by-pitches. Formula: (H + BB + HBP) ÷ (AB + BB + HBP + SF)</p>
+                        <p><strong>SLG (Slugging Percentage):</strong> Measures a batter's power by calculating total bases per at-bat. Formula: Total Bases ÷ At-Bats. A single = 1 base, double = 2, triple = 3, home run = 4.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="basic">
+                    <div class="faq-question">
+                        <h3>What are strikeouts and walks?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Strikeout (SO or K):</strong> When a batter receives three strikes during their at-bat. Strikes include swinging and missing, not swinging at a pitch in the strike zone, or fouling off pitches (except a foul on the third strike doesn't count unless it's a bunt).</p>
+                        <p><strong>Walk (BB or Base on Balls):</strong> When a batter receives four pitches outside the strike zone during their at-bat, they are awarded first base.</p>
+                    </div>
+                </div>
+
+                <!-- Advanced Stats Questions -->
+                <div class="faq-item" data-category="advanced">
+                    <div class="faq-question">
+                        <h3>What is WAR (Wins Above Replacement)?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>WAR is a comprehensive statistic that attempts to capture a player's total value in one number. It estimates how many more wins a player provides to their team compared to a replacement-level player (a readily available minor league or bench player).</p>
+                        <p><strong>WAR Scale:</strong></p>
+                        <ul>
+                            <li>8+ WAR: MVP caliber season</li>
+                            <li>5-8 WAR: All-Star level</li>
+                            <li>2-5 WAR: Solid starter</li>
+                            <li>0-2 WAR: Role player / bench player</li>
+                            <li>Below 0: Replacement level or worse</li>
+                        </ul>
+                        <p>Note: Different sources (Baseball Reference, FanGraphs) calculate WAR slightly differently.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="advanced">
+                    <div class="faq-question">
+                        <h3>What is OPS and why is it important?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>OPS (On-base Plus Slugging) combines a player's on-base percentage and slugging percentage. It's calculated simply by adding OBP + SLG.</p>
+                        <p>OPS is valuable because it combines a player's ability to get on base with their power hitting, giving a more complete picture of offensive production than batting average alone.</p>
+                        <p><strong>OPS Scale:</strong></p>
+                        <ul>
+                            <li>.900+ : Excellent / All-Star level</li>
+                            <li>.800-.900: Above average / Very good</li>
+                            <li>.750-.800: Average</li>
+                            <li>.700-.750: Below average</li>
+                            <li>Below .700: Poor</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="advanced">
+                    <div class="faq-question">
+                        <h3>What is wOBA (Weighted On-Base Average)?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>wOBA is similar to on-base percentage, but it weights each outcome (single, double, walk, etc.) according to its actual run value. This makes it more accurate than OBP or OPS at measuring a player's offensive contribution.</p>
+                        <p>The scale is set to look like on-base percentage, where .320 is average and .400 is excellent. wOBA is one of the best single statistics for measuring overall hitting performance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="advanced">
+                    <div class="faq-question">
+                        <h3>What is FIP (Fielding Independent Pitching)?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>FIP measures what a pitcher's ERA should have been based only on outcomes they can control: strikeouts, walks, hit-by-pitches, and home runs. It removes the influence of fielding and luck on balls in play.</p>
+                        <p>FIP is scaled to ERA, so you can interpret it the same way. If a pitcher's FIP is much lower than their ERA, they may have been unlucky or had poor defensive support. If FIP is higher than ERA, they may have been lucky.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="advanced">
+                    <div class="faq-question">
+                        <h3>What is WHIP in pitching?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>WHIP (Walks and Hits per Inning Pitched) measures how many baserunners a pitcher allows per inning. It's calculated as: (Walks + Hits) ÷ Innings Pitched.</p>
+                        <p><strong>WHIP Scale:</strong></p>
+                        <ul>
+                            <li>Below 1.00: Excellent / Elite</li>
+                            <li>1.00-1.20: Above average</li>
+                            <li>1.20-1.40: Average</li>
+                            <li>Above 1.40: Below average</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="advanced">
+                    <div class="faq-question">
+                        <h3>What is ISO (Isolated Power)?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ISO measures a player's raw power by looking at extra-base hits. It's calculated as: SLG - AVG, which essentially shows the extra bases per at-bat beyond singles.</p>
+                        <p>.200+ ISO is considered excellent power, .150-.200 is above average, and below .100 indicates little power.</p>
+                    </div>
+                </div>
+
+                <!-- Site Usage Questions -->
+                <div class="faq-item" data-category="site">
+                    <div class="faq-question">
+                        <h3>How often is the data updated?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our statistics are updated in real-time during games. Once a game concludes, all stats are finalized within minutes. We pull data directly from official MLB sources to ensure accuracy.</p>
+                        <p>Historical statistics are also periodically reviewed and updated if official corrections are made.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="site">
+                    <div class="faq-question">
+                        <h3>Can I compare players from different eras?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Our statistics database includes comprehensive data dating back to the earliest days of professional baseball. However, keep in mind that the game has evolved significantly over time.</p>
+                        <p>Advanced metrics like wRC+ and ERA+ are particularly useful for cross-era comparisons because they're adjusted for league and park factors, making them more comparable across different time periods.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="site">
+                    <div class="faq-question">
+                        <h3>How do I filter statistics by team or season?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>On the Statistics page, you'll find filter controls at the top of the page. Simply select your desired team from the dropdown menu and choose the season you want to view. Click "Apply Filters" to update the statistics table.</p>
+                        <p>You can also use the search bar to quickly find specific players.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="site">
+                    <div class="faq-question">
+                        <h3>What's the difference between traditional and advanced stats?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Traditional stats</strong> are the classic measures that have been used for decades: batting average, home runs, RBI, wins, ERA, etc. They're easy to understand but don't always tell the complete story.</p>
+                        <p><strong>Advanced stats</strong> (also called sabermetrics) use more complex calculations to measure player value more accurately. They account for context like ballpark factors, league averages, and defensive support. Examples include WAR, wOBA, FIP, and wRC+.</p>
+                        <p>Both have their place! Traditional stats are great for quick understanding, while advanced stats provide deeper insights for analysis.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="site">
+                    <div class="faq-question">
+                        <h3>Do you have a mobile app?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we don't currently have a native mobile app, our website is fully responsive and works seamlessly on all mobile devices. Simply access our site through your mobile browser for the same great experience!</p>
+                        <p>You can also add our site to your home screen for quick access that feels like a native app.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="basic">
+                    <div class="faq-question">
+                        <h3>What do 2B, 3B, and AB mean?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>2B (Doubles):</strong> Hits where the batter reaches second base safely.</p>
+                        <p><strong>3B (Triples):</strong> Hits where the batter reaches third base safely.</p>
+                        <p><strong>AB (At-Bats):</strong> The number of times a batter completes a plate appearance that doesn't result in a walk, hit-by-pitch, sacrifice, or interference.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="advanced">
+                    <div class="faq-question">
+                        <h3>What is BABIP (Batting Average on Balls In Play)?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BABIP measures how often a ball in play (excluding home runs) falls for a hit. It's calculated as: (H - HR) ÷ (AB - K - HR + SF).</p>
+                        <p>League average BABIP is typically around .300. Unusually high or low BABIP often indicates luck—either good or bad—and players tend to regress toward .300 over time. However, some players consistently maintain higher BABIPs due to speed or hitting approach.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="site">
+                    <div class="faq-question">
+                        <h3>Can I export or download statistics?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, the website is designed for viewing statistics directly. However, we're working on adding export functionality to allow you to download data in CSV or Excel format. This feature will be available soon!</p>
+                        <p>If you need specific data for research or analysis, please contact us and we'll do our best to help.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="basic">
+                    <div class="faq-question">
+                        <h3>What is a save in baseball?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A save is awarded to a relief pitcher who finishes a game for the winning team under certain conditions:</p>
+                        <ul>
+                            <li>Enters with a lead of no more than three runs and pitches at least one inning, OR</li>
+                            <li>Enters with the tying run on base, at bat, or on deck, OR</li>
+                            <li>Pitches at least three innings</li>
+                        </ul>
+                        <p>The pitcher must not be credited with the win to earn a save.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="advanced">
+                    <div class="faq-question">
+                        <h3>What's the difference between bWAR and fWAR?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>bWAR (Baseball Reference WAR)</strong> and <strong>fWAR (FanGraphs WAR)</strong> are two different implementations of the WAR statistic.</p>
+                        <p>The main differences:</p>
+                        <ul>
+                            <li><strong>Defense:</strong> They use different defensive metrics (DRS vs UZR)</li>
+                            <li><strong>Pitching:</strong> bWAR uses actual runs allowed while fWAR uses FIP (outcomes the pitcher controls)</li>
+                            <li><strong>League adjustments:</strong> Slightly different approaches to league and park factors</li>
+                        </ul>
+                        <p>Both are valuable. fWAR is better for predicting future performance, while bWAR better captures what actually happened.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Still Have Questions?</h2>
+            <p class="text-center">Can't find what you're looking for? Contact our support team and we'll be happy to help!</p>
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>support@mlbanalytics.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Live Chat</h3>
+                    <p>Available 9 AM - 6 PM ET</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-twitter"></i>
+                    <h3>Twitter</h3>
+                    <p>@MLBAnalyticsHub</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MLB Analytics Hub</h3>
+                    <p>Your trusted source for comprehensive baseball statistics and advanced analytics.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stats.html">Statistics</a></li>
+                        <li><a href="leaders.html">Stat Leaders</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Data Sources</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MLB Analytics Hub. All rights reserved. Not affiliated with MLB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

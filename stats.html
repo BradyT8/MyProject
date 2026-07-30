@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB Statistics - MLB Analytics Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-baseball-ball"></i>
+                <span>MLB Analytics</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stats.html" class="active">Statistics</a></li>
+                <li><a href="leaders.html">Stat Leaders</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>MLB Statistics</h1>
+            <p>Comprehensive baseball statistics and advanced analytics</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="stat-category">
+                        <option value="batting">Batting</option>
+                        <option value="pitching">Pitching</option>
+                        <option value="fielding">Fielding</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Season:</label>
+                    <select id="season-select">
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Team:</label>
+                    <select id="team-select">
+                        <option value="all">All Teams</option>
+                        <option value="NYY">New York Yankees</option>
+                        <option value="BOS">Boston Red Sox</option>
+                        <option value="LAD">Los Angeles Dodgers</option>
+                        <option value="HOU">Houston Astros</option>
+                        <option value="ATL">Atlanta Braves</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Tables -->
+    <section class="stats-tables">
+        <div class="container">
+            <h2 class="section-title">Batting Statistics</h2>
+            
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="player-search" placeholder="Search for a player...">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <!-- Batting Stats Table -->
+            <div class="table-responsive">
+                <table class="stats-table" id="batting-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>G</th>
+                            <th>AB</th>
+                            <th>R</th>
+                            <th>H</th>
+                            <th>2B</th>
+                            <th>3B</th>
+                            <th>HR</th>
+                            <th>RBI</th>
+                            <th>BB</th>
+                            <th>SO</th>
+                            <th>SB</th>
+                            <th>AVG</th>
+                            <th>OBP</th>
+                            <th>SLG</th>
+                            <th>OPS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Aaron Judge</td>
+                            <td>NYY</td>
+                            <td>148</td>
+                            <td>542</td>
+                            <td>118</td>
+                            <td>169</td>
+                            <td>32</td>
+                            <td>2</td>
+                            <td>42</td>
+                            <td>115</td>
+                            <td>89</td>
+                            <td>143</td>
+                            <td>8</td>
+                            <td>.311</td>
+                            <td>.408</td>
+                            <td>.598</td>
+                            <td>1.006</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mike Trout</td>
+                            <td>LAA</td>
+                            <td>142</td>
+                            <td>528</td>
+                            <td>112</td>
+                            <td>171</td>
+                            <td>34</td>
+                            <td>3</td>
+                            <td>38</td>
+                            <td>102</td>
+                            <td>94</td>
+                            <td>128</td>
+                            <td>12</td>
+                            <td>.324</td>
+                            <td>.421</td>
+                            <td>.592</td>
+                            <td>1.013</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mookie Betts</td>
+                            <td>LAD</td>
+                            <td>145</td>
+                            <td>538</td>
+                            <td>108</td>
+                            <td>164</td>
+                            <td>38</td>
+                            <td>4</td>
+                            <td>35</td>
+                            <td>98</td>
+                            <td>82</td>
+                            <td>112</td>
+                            <td>18</td>
+                            <td>.305</td>
+                            <td>.394</td>
+                            <td>.572</td>
+                            <td>.966</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Juan Soto</td>
+                            <td>NYY</td>
+                            <td>147</td>
+                            <td>518</td>
+                            <td>105</td>
+                            <td>158</td>
+                            <td>31</td>
+                            <td>2</td>
+                            <td>36</td>
+                            <td>96</td>
+                            <td>102</td>
+                            <td>109</td>
+                            <td>6</td>
+                            <td>.305</td>
+                            <td>.418</td>
+                            <td>.558</td>
+                            <td>.976</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Ronald Acuña Jr.</td>
+                            <td>ATL</td>
+                            <td>149</td>
+                            <td>556</td>
+                            <td>124</td>
+                            <td>167</td>
+                            <td>29</td>
+                            <td>5</td>
+                            <td>39</td>
+                            <td>94</td>
+                            <td>78</td>
+                            <td>135</td>
+                            <td>42</td>
+                            <td>.300</td>
+                            <td>.386</td>
+                            <td>.565</td>
+                            <td>.951</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Freddie Freeman</td>
+                            <td>LAD</td>
+                            <td>151</td>
+                            <td>582</td>
+                            <td>98</td>
+                            <td>183</td>
+                            <td>42</td>
+                            <td>2</td>
+                            <td>28</td>
+                            <td>105</td>
+                            <td>76</td>
+                            <td>98</td>
+                            <td>4</td>
+                            <td>.314</td>
+                            <td>.395</td>
+                            <td>.532</td>
+                            <td>.927</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Shohei Ohtani</td>
+                            <td>LAD</td>
+                            <td>146</td>
+                            <td>545</td>
+                            <td>115</td>
+                            <td>165</td>
+                            <td>35</td>
+                            <td>3</td>
+                            <td>44</td>
+                            <td>108</td>
+                            <td>81</td>
+                            <td>156</td>
+                            <td>21</td>
+                            <td>.303</td>
+                            <td>.390</td>
+                            <td>.612</td>
+                            <td>1.002</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Yordan Alvarez</td>
+                            <td>HOU</td>
+                            <td>144</td>
+                            <td>528</td>
+                            <td>92</td>
+                            <td>162</td>
+                            <td>34</td>
+                            <td>1</td>
+                            <td>37</td>
+                            <td>112</td>
+                            <td>88</td>
+                            <td>119</td>
+                            <td>2</td>
+                            <td>.307</td>
+                            <td>.406</td>
+                            <td>.578</td>
+                            <td>.984</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Matt Olson</td>
+                            <td>ATL</td>
+                            <td>152</td>
+                            <td>568</td>
+                            <td>104</td>
+                            <td>163</td>
+                            <td>36</td>
+                            <td>0</td>
+                            <td>41</td>
+                            <td>118</td>
+                            <td>84</td>
+                            <td>142</td>
+                            <td>3</td>
+                            <td>.287</td>
+                            <td>.378</td>
+                            <td>.572</td>
+                            <td>.950</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Kyle Tucker</td>
+                            <td>HOU</td>
+                            <td>148</td>
+                            <td>552</td>
+                            <td>102</td>
+                            <td>168</td>
+                            <td>39</td>
+                            <td>3</td>
+                            <td>34</td>
+                            <td>103</td>
+                            <td>72</td>
+                            <td>126</td>
+                            <td>24</td>
+                            <td>.304</td>
+                            <td>.384</td>
+                            <td>.554</td>
+                            <td>.938</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+        <div class="container">
+            <h2 class="section-title">Statistical Analysis</h2>
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Home Runs by Team</h3>
+                    <canvas id="homeRunsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Batting Average Distribution</h3>
+                    <canvas id="avgChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Stats Section -->
+    <section class="advanced-stats">
+        <div class="container">
+            <h2 class="section-title">Advanced Metrics</h2>
+            <div class="info-box">
+                <i class="fas fa-info-circle"></i>
+                <p>Advanced metrics provide deeper insights beyond traditional statistics. Learn more about each metric in our <a href="faq.html">FAQ</a>.</p>
+            </div>
+            
+            <div class="advanced-stats-grid">
+                <div class="advanced-stat-card">
+                    <h3>WAR (Wins Above Replacement)</h3>
+                    <p>Measures a player's total value in terms of wins compared to a replacement-level player.</p>
+                    <div class="stat-leaders-mini">
+                        <div class="stat-leader-item">
+                            <span class="rank">1.</span>
+                            <span class="name">Mike Trout</span>
+                            <span class="value">8.5</span>
+                        </div>
+                        <div class="stat-leader-item">
+                            <span class="rank">2.</span>
+                            <span class="name">Aaron Judge</span>
+                            <span class="value">8.2</span>
+                        </div>
+                        <div class="stat-leader-item">
+                            <span class="rank">3.</span>
+                            <span class="name">Mookie Betts</span>
+                            <span class="value">7.8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-stat-card">
+                    <h3>wOBA (Weighted On-Base Average)</h3>
+                    <p>Combines all offensive outcomes into one metric, weighted by their run values.</p>
+                    <div class="stat-leaders-mini">
+                        <div class="stat-leader-item">
+                            <span class="rank">1.</span>
+                            <span class="name">Juan Soto</span>
+                            <span class="value">.412</span>
+                        </div>
+                        <div class="stat-leader-item">
+                            <span class="rank">2.</span>
+                            <span class="name">Mike Trout</span>
+                            <span class="value">.408</span>
+                        </div>
+                        <div class="stat-leader-item">
+                            <span class="rank">3.</span>
+                            <span class="name">Aaron Judge</span>
+                            <span class="value">.402</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-stat-card">
+                    <h3>wRC+ (Weighted Runs Created Plus)</h3>
+                    <p>Quantifies offensive performance adjusted for park and league factors (100 is league average).</p>
+                    <div class="stat-leaders-mini">
+                        <div class="stat-leader-item">
+                            <span class="rank">1.</span>
+                            <span class="name">Aaron Judge</span>
+                            <span class="value">178</span>
+                        </div>
+                        <div class="stat-leader-item">
+                            <span class="rank">2.</span>
+                            <span class="name">Mike Trout</span>
+                            <span class="value">175</span>
+                        </div>
+                        <div class="stat-leader-item">
+                            <span class="rank">3.</span>
+                            <span class="name">Juan Soto</span>
+                            <span class="value">168</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advanced-stat-card">
+                    <h3>ISO (Isolated Power)</h3>
+                    <p>Measures a player's raw power by calculating extra bases per at-bat.</p>
+                    <div class="stat-leaders-mini">
+                        <div class="stat-leader-item">
+                            <span class="rank">1.</span>
+                            <span class="name">Aaron Judge</span>
+                            <span class="value">.287</span>
+                        </div>
+                        <div class="stat-leader-item">
+                            <span class="rank">2.</span>
+                            <span class="name">Shohei Ohtani</span>
+                            <span class="value">.309</span>
+                        </div>
+                        <div class="stat-leader-item">
+                            <span class="rank">3.</span>
+                            <span class="name">Mike Trout</span>
+                            <span class="value">.268</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MLB Analytics Hub</h3>
+                    <p>Your trusted source for comprehensive baseball statistics and advanced analytics.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stats.html">Statistics</a></li>
+                        <li><a href="leaders.html">Stat Leaders</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Data Sources</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MLB Analytics Hub. All rights reserved. Not affiliated with MLB.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
