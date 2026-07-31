@@ -116,6 +116,7 @@ img {
     background-image: url('https://github.com/user-attachments/assets/6b97bc91-93fe-4f58-b46d-bce77a74f90d');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-blend-mode: overlay;
     display: flex;
     align-items: center;
