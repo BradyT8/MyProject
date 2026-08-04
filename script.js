@@ -28,6 +28,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // MLB Moments Modal
+    const momentModal = document.getElementById('moment-modal');
+    const momentModalClose = document.getElementById('moment-modal-close');
+    const modalTitle = document.getElementById('moment-modal-title');
+    const modalSummary = document.getElementById('moment-modal-summary');
+    const modalDetails = document.getElementById('moment-modal-details');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    function closeMomentModal() {
+        if (momentModal) {
+            momentModal.classList.remove('active');
+            momentModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    }
+
+    function openMomentModal(item) {
+        if (!momentModal || !modalTitle || !modalSummary || !modalDetails) return;
+
+        modalTitle.textContent = item.dataset.title || 'MLB Highlight';
+        modalSummary.textContent = item.dataset.summary || 'A memorable MLB moment.';
+
+        const detailItems = (item.dataset.details || '').split('|');
+        modalDetails.innerHTML = detailItems
+            .filter(Boolean)
+            .map(detail => `<li>${detail}</li>`)
+            .join('');
+
+        momentModal.classList.add('active');
+        momentModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => openMomentModal(item));
+        item.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openMomentModal(item);
+            }
+        });
+    });
+
+    if (momentModalClose) {
+        momentModalClose.addEventListener('click', closeMomentModal);
+    }
+
+    if (momentModal) {
+        momentModal.addEventListener('click', (event) => {
+            if (event.target === momentModal) {
+                closeMomentModal();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && momentModal && momentModal.classList.contains('active')) {
+            closeMomentModal();
+        }
+    });
+
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {

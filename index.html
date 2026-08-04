@@ -136,33 +136,47 @@
         <div class="container">
             <h2 class="section-title">MLB Moments</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">
+                <div class="gallery-item" role="button" tabindex="0" data-title="Home Run Derby" data-summary="Yordan Alvarez stole the spotlight with a blistering final-round performance that helped define the night." data-details="Final-round fireworks: Alvarez sent multiple long balls into the upper deck|Season-defining moment: The performance energized the crowd and the standings|Fan favorite: The clip became one of the most shared highlights of the week">
                     <img src="https://github.com/user-attachments/assets/c573a0ad-4f9b-45e0-a9f5-0fc705c4a5e4" alt="Home Run Derby" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Shohei_Ohtani_batting_2021.jpg/600px-Shohei_Ohtani_batting_2021.jpg'">
                     <div class="gallery-overlay">
                         <h3>Home Run Derby</h3>
+                        <p class="gallery-caption">Tap to view highlights</p>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" role="button" tabindex="0" data-title="Game-Winning Hit" data-summary="Mookie Betts delivered a dramatic walk-off that flipped the game in the final inning." data-details="Walk-off heroics: Betts lined a two-run shot to left in the bottom of the ninth|Game-changing swing: The hit swung the momentum and sealed the series|Instant classic: The moment was replayed throughout the league the next day">
                     <img src="https://github.com/user-attachments/assets/7825b8c2-2992-4276-abc4-5ff3c9e5e7a4" alt="Game-Winning Hit" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mookie_Betts_2021.jpg/600px-Mookie_Betts_2021.jpg'">
                     <div class="gallery-overlay">
                         <h3>Game-Winning Hit</h3>
+                        <p class="gallery-caption">Tap to view highlights</p>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" role="button" tabindex="0" data-title="Perfect Pitch" data-summary="Paul Skenes carved through the lineup with a dominant performance that looked effortless." data-details="Strikeout sequence: Skenes retired the side with a mix of fastball and slider|Command masterclass: The outing featured pinpoint control in every count|Pitching statement: The performance made him one of the season's most talked-about arms">
                     <img src="https://github.com/user-attachments/assets/92f7e2b1-0e72-45aa-88ee-7091013dc1ae" alt="Perfect Pitch" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Gerrit_Cole_pitching_2019.jpg/600px-Gerrit_Cole_pitching_2019.jpg'">
                     <div class="gallery-overlay">
                         <h3>Perfect Pitch</h3>
+                        <p class="gallery-caption">Tap to view highlights</p>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" role="button" tabindex="0" data-title="Championship Glory" data-summary="A clutch postseason swing delivered the championship-clinching moment the fans had been waiting for." data-details="Title-clinching swing: The blast brought the crowd to its feet in the final frame|Historic finish: The team captured the title after a dramatic back-and-forth series|Legacy moment: The image immediately became a signature memory of the season">
                     <img src="https://github.com/user-attachments/assets/b3d18620-5710-4524-86c2-ea4af1692fea" alt="Championship Glory" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/World_Series_trophy_2016.jpg/600px-World_Series_trophy_2016.jpg'">
                     <div class="gallery-overlay">
                         <h3>Championship Glory</h3>
+                        <p class="gallery-caption">Tap to view highlights</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="moment-modal" id="moment-modal" aria-hidden="true">
+        <div class="moment-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="moment-modal-title">
+            <button class="moment-modal-close" id="moment-modal-close" aria-label="Close highlight">&times;</button>
+            <p class="moment-modal-label">MLB Highlight</p>
+            <h3 id="moment-modal-title"></h3>
+            <p id="moment-modal-summary"></p>
+            <ul id="moment-modal-details"></ul>
+        </div>
+    </div>
 
     <!-- Statistics Preview Section -->
     <section class="stats-preview">
